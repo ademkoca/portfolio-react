@@ -1,38 +1,160 @@
-.App {
-  text-align: center;
+.bd-placeholder-img {
+  font-size: 1.125rem;
+  text-anchor: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media (min-width: 768px) {
+  .bd-placeholder-img-lg {
+    font-size: 3.5rem;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+* {
+  box-sizing: border-box;
+  font-family: 'Quicksand', sans-serif;
+}
+
+:root {
+  --background: #ffffff;
+  --text: #181818;
+  --elements: #ffffff;
+  --button-back: #0a58ca;
+  --input: #ffffff;
+  --button-text: #ffffff;
+}
+[data-theme='dark'] {
+  --background: #1c1c1e;
+  --text: #fefefe;
+  --elements: #ffffff;
+  --button-back: #ffffff;
+  --button-text: #000000;
+}
+
+button[type='button'].toast-btn {
+  position: static;
+}
+.tost-link,
+.tost-link:hover,
+.tost-link:active,
+.tost-link:link,
+.tost-link:visited {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+@media screen and (min-width: 350px) and (max-width: 768px) {
+  .modal-body img {
+    max-width: 100%;
+  }
+  h5 {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .card a img {
+    -webkit-filter: grayscale(0%) !important; /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%) !important;
+  }
+}
+
+#main-logo {
+  width: 30px;
+}
+
+.light {
+  border: 1px solid #212529;
+  padding: 0 0.5rem;
+  padding-bottom: 0.1rem;
+  border-radius: 5px;
+}
+
+.dark {
+  background-color: #212529;
+  color: #ffffff;
+  padding: 0 0.5rem;
+  padding-bottom: 0.1rem;
+  border-radius: 5px;
+}
+
+.rounded-circle {
+  width: 100px;
+  height: auto;
+}
+
+.pricing-header {
+  max-width: 700px;
+}
+
+.carousel-item img {
+  max-height: 500px !important;
+  object-fit: contain;
+  width: 100%;
+  /* border: 1px solid #212529; */
+}
+@media screen and (min-width: 768px) {
+  .carousel-item img {
+    max-height: 500px !important;
+  }
+}
+
+.list-group-item:before {
+  /* content: url('../img/logo-black-16x16.png') !important; */
+  content: url('../public/img/check.svg') !important;
+  margin-right: 10px;
+  top: 10px;
+}
+
+.list-group-item {
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.b-example-divider {
+  height: 3rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: solid rgba(0, 0, 0, 0.15);
+  border-width: 1px 0;
+  box-shadow: inset 0 0.5em 1.5em rgba(0, 0, 0, 0.1),
+    inset 0 0.125em 0.5em rgba(0, 0, 0, 0.15);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (min-width: 992px) {
+  .rounded-lg-3 {
+    border-radius: 0.3rem;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+
+#main-hero {
+  height: 100vh;
+}
+
+.card a img {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+.card a img:hover {
+  -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
+}
+
+.badge {
+  font-size: 0.875em !important;
+}
+
+.bg-gray-900 {
+  background-color: #212529 !important;
+}
+.bg-gray-800 {
+  background-color: #6c757d !important;
+}
+.bg-gray-700 {
+  background-color: #dee2e6 !important;
+  color: #000;
+}
+
+.spinner-border {
+  z-index: 9999;
 }
