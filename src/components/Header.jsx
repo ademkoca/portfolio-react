@@ -69,7 +69,7 @@ const Header = () => {
       <div className="navbar navbar-dark bg-dark shadow-sm">
         <div className="container">
           <a
-            href="/"
+            href="/portfolio-react"
             rel="noopener noreferrer"
             className="navbar-brand d-flex align-items-center"
           >

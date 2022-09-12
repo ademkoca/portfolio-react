@@ -17,6 +17,9 @@ const Card = ({ project }) => {
   // const getRandomArbitrary = (min, max) => {
   //   return Math.floor(Math.random() * (max - min) + min);
   // };
+  // const changecursor = (e) => {
+  //   e.target.style.cursor = 'pointer';
+  // };
   useEffect(() => {
     const getLanguages = async () => {
       await axios
@@ -126,7 +129,7 @@ const Card = ({ project }) => {
                   type="button"
                   className="btn btn-sm btn-outline-secondary"
                 >
-                  &lt;Code/&gt;
+                  GitHub
                 </button>
               </a>
             </div>
