@@ -25,7 +25,7 @@ const Header = () => {
               <ul className="list-unstyled">
                 <li>
                   <a
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     href="https://twitter.com/rahatlook"
                     target="_blank"
                     className="text-white"
@@ -35,7 +35,7 @@ const Header = () => {
                 </li>
                 <li>
                   <a
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     href="https://www.linkedin.com/in/ademkoca/"
                     target="_blank"
                     className="text-white"
@@ -45,7 +45,7 @@ const Header = () => {
                 </li>
                 <li>
                   <a
-                    rel="noreferrer"
+                    rel="noopener noreferrer"
                     href="https://www.github.com/ademkoca/"
                     target="_blank"
                     className="text-white"
@@ -70,7 +70,7 @@ const Header = () => {
         <div className="container">
           <a
             href="/"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             className="navbar-brand d-flex align-items-center"
           >
             <img

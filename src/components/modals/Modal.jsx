@@ -1,108 +1,74 @@
 import React, { useEffect, useState } from 'react';
 
-const Modal = ({ project, onClose }) => {
+const Modal = ({ project, handleClose }) => {
   const [buttons, setButtons] = useState([]);
   useEffect(() => {
     for (let i = 0; i < project.modalImg.length; i++) {
       setButtons((prev) => [...prev, i]);
-      // console.log(buttons);
     }
   }, []);
 
   return (
-    <div>
-      {/*<!--Modal 9--> */}
-      <div
-        className="modal fade"
-        id={`staticBackdrop${project.id}`}
-        data-bs-backdrop="static"
-        data-bs-keyboard="false"
-        tabIndex="-1"
-        aria-labelledby={`staticBackdrop${project.id}Label`}
-        aria-hidden="true"
-      >
-        <div className="modal-dialog modal-lg">
-          <div className="modal-content">
-            <div className="modal-header">
-              <h5
-                className="modal-title"
-                id={`staticBackdrop${project.id}Label`}
-              >
-                {project.title}
-              </h5>
-              <button
-                type="button"
-                className="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div className="modal-body">
-              <div
-                id={`carouselExampleCaptions${project.id}`}
-                className="carousel slide"
-                data-bs-ride="carousel"
-              >
-                <div className="carousel-indicators">
-                  {buttons.map((b) => (
-                    <button
-                      type="button"
-                      data-bs-target={`#carouselExampleCaptions${project.id}`}
-                      data-bs-slide-to={`${b}`}
-                      className="active"
-                      aria-current="true"
-                      aria-label={`Slide ${b + 1}`}
-                    ></button>
-                  ))}
-
-                  {/* <button
+    <div
+      className="modal fade"
+      id={`staticBackdrop${project.id}`}
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabIndex="-1"
+      aria-labelledby={`staticBackdrop${project.id}Label`}
+      aria-hidden="true"
+    >
+      <div className="modal-dialog modal-lg">
+        <div className="modal-content">
+          <div className="modal-header">
+            <h5 className="modal-title" id={`staticBackdrop${project.id}Label`}>
+              {project.title}
+            </h5>
+            <button
+              type="button"
+              className="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div className="modal-body">
+            <div
+              id={`carouselExampleCaptions${project.id}`}
+              className="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div className="carousel-indicators">
+                {buttons.map((b, idx) => (
+                  <button
+                    key={idx}
                     type="button"
-                    data-bs-target="#carouselExampleCaptions9"
-                    data-bs-slide-to="0"
-                    className={`${i===0?"active": ""}`}
+                    data-bs-target={`#carouselExampleCaptions${project.id}`}
+                    data-bs-slide-to={`${b}`}
+                    className="active"
                     aria-current="true"
-                    aria-label="Slide 1"
-                  ></button> */}
-                  {/* <button
-                    type="button"
-                    data-bs-target="#carouselExampleCaptions9"
-                    data-bs-slide-to="1"
-                    aria-label="Slide 2"
-                  ></button> */}
-                  {/* <button
-                    type="button"
-                    data-bs-target="#carouselExampleCaptions9"
-                    data-bs-slide-to="2"
-                    aria-label="Slide 3"
-                  ></button> */}
-                </div>
-                <div className="carousel-inner">
-                  <div className="carousel-item active">
+                    aria-label={`Slide ${b + 1}`}
+                  ></button>
+                ))}
+              </div>
+              <div className="carousel-inner">
+                {project.modalImg.map((img, idx) => (
+                  <div
+                    className={`carousel-item ${idx === 0 ? 'active' : ''}`}
+                    key={idx}
+                  >
                     <img
-                      src="img/crowdfund/desktop.png"
+                      src={`img/${img}`}
                       className="d-block w-100"
-                      alt="Crowdfund product page desktop screenshot"
+                      alt={project.modalImgAlt[idx]}
                     />
                   </div>
-                  <div className="carousel-item">
-                    <img
-                      src="img/crowdfund/tablet.png"
-                      className="d-block w-100"
-                      alt="Crowdfund product page tablet screenshot"
-                    />
-                  </div>
-                  <div className="carousel-item">
-                    <img
-                      src="img/crowdfund/mobile.png"
-                      className="d-block w-100"
-                      alt="Crowdfund product page mobile screenshot"
-                    />
-                  </div>
-                </div>
+                ))}
+              </div>
+              {project.modalImg.length > 1 && (
                 <button
                   className="carousel-control-prev"
                   type="button"
-                  data-bs-target="#carouselExampleCaptions9"
+                  data-bs-target={`#carouselExampleCaptions${project.id}`}
                   data-bs-slide="prev"
                 >
                   <span
@@ -111,10 +77,12 @@ const Modal = ({ project, onClose }) => {
                   ></span>
                   <span className="visually-hidden">Previous</span>
                 </button>
+              )}
+              {project.modalImg.length > 1 && (
                 <button
                   className="carousel-control-next"
                   type="button"
-                  data-bs-target="#carouselExampleCaptions9"
+                  data-bs-target={`#carouselExampleCaptions${project.id}`}
                   data-bs-slide="next"
                 >
                   <span
@@ -123,28 +91,26 @@ const Modal = ({ project, onClose }) => {
                   ></span>
                   <span className="visually-hidden">Next</span>
                 </button>
-              </div>
+              )}
             </div>
-            <div className="modal-footer">
-              <a href="https://ademkoca.github.io/crowdfund" target="_blank">
-                <button type="button" className="btn btn-primary">
-                  Visit site
-                </button>
-              </a>
-              <button
-                type="button"
-                className="btn btn-secondary"
-                data-bs-dismiss="modal"
-                onClick={onClose}
-              >
-                Close
+          </div>
+          <div className="modal-footer">
+            <a href={project.URL} target="_blank" rel="noopener noreferrer">
+              <button type="button" className="btn btn-primary">
+                Visit site
               </button>
-              {/*<!-- <button type="button" className="btn btn-primary">Understood</button> -->*/}
-            </div>
+            </a>
+            <button
+              type="button"
+              className="btn btn-secondary"
+              data-bs-dismiss="modal"
+              onClick={handleClose}
+            >
+              Close
+            </button>
           </div>
         </div>
       </div>
-      {/* {/*<!--/Modal 9--> */}
     </div>
   );
 };

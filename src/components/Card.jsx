@@ -4,14 +4,19 @@ import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Modal from './modals/Modal';
 import axios from 'axios';
 import moment from 'moment/moment';
+// import { compileString } from 'sass';
 const Card = ({ project }) => {
-  const [languages, setLanguages] = useState({});
+  const [languages, setLanguages] = useState({
+    HTML: 2,
+    CSS: 3,
+    JavaScript: 1,
+  });
   const [total, setTotal] = useState(0);
   const [date, setDate] = useState('');
-  const sumValues = (obj) => Object.values(obj).reduce((a, b) => a + b);
-  const getRandomArbitrary = (min, max) => {
-    return Math.floor(Math.random() * (max - min) + min);
-  };
+  // const sumValues = (obj) => Object.values(obj).reduce((a, b) => a + b);
+  // const getRandomArbitrary = (min, max) => {
+  //   return Math.floor(Math.random() * (max - min) + min);
+  // };
   useEffect(() => {
     const getLanguages = async () => {
       await axios
@@ -21,13 +26,18 @@ const Card = ({ project }) => {
         .then((response) => {
           setLanguages(response.data);
           // console.log(languages);
-          setTotal(Object.values(languages).reduce((a, b) => a + b));
+          setTotal(
+            Object.values(languages).reduce((a, b) => {
+              return a + b;
+            }, 0)
+          );
+          // console.log(total);
           //   sumValues(languages);
-          console.log(Object.values(languages).reduce((a, b) => a + b));
+          //   console.log(Object.values(languages).reduce((a, b) => a + b));
         });
     };
     getLanguages();
-  }, []);
+  }, [total]);
 
   useEffect(() => {
     const getDate = async () => {
@@ -43,20 +53,31 @@ const Card = ({ project }) => {
         });
     };
     getDate();
-  }, []);
+  }, [date]);
 
-  const [showModal, setShowModal] = useState(false);
-  const onClose = () => {
-    setShowModal(false);
+  const [showModal, setShowModal] = useState(true);
+  const handleClose = () => {
+    setTimeout(() => {
+      setShowModal(false);
+    }, 1000);
+  };
+  const handleShow = () => {
+    setTimeout(() => {
+      setShowModal(true);
+    }, 1000);
   };
   //   console.log('#staticBackdrop' + project.id);
   return (
     <div className="col">
+      {showModal && (
+        <Modal key={project.id} project={project} handleClose={handleClose} />
+      )}
       <div className="card shadow-sm">
         <a
           href="#"
           data-bs-toggle="modal"
           data-bs-target={`#staticBackdrop${project.id}`}
+          onClick={handleShow}
         >
           <img
             src={`img/${project.mainImg}`}
@@ -79,16 +100,33 @@ const Card = ({ project }) => {
                 className="btn btn-sm btn-outline-primary"
                 data-bs-toggle="modal"
                 data-bs-target={`#staticBackdrop${project.id}`}
-                onClick={() => setShowModal(true)}
+                onClick={
+                  () =>
+                    // setTimeout(() => {
+                    handleShow
+                  // }, 2000)
+                }
               >
                 Preview
               </button>
-              <a href={project.URL} target="_blank">
+              <a href={project.URL} target="_blank" rel="noopener noreferrer">
                 <button
                   type="button"
                   className="btn btn-sm btn-outline-secondary"
                 >
                   Visit site
+                </button>
+              </a>
+              <a
+                href={`https://github.com/ademkoca/${project.GitHubRepoName}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button
+                  type="button"
+                  className="btn btn-sm btn-outline-secondary"
+                >
+                  &lt;Code/&gt;
                 </button>
               </a>
             </div>
@@ -101,7 +139,7 @@ const Card = ({ project }) => {
               <div
                 key={key}
                 className={`progress-bar bg-gray-${Math.floor(
-                  Math.random() * (9 - 6) + 6
+                  Math.random() * (9 - 5) + 6
                 )}00`}
                 role="progressbar"
                 style={{ width: `${(100 * value) / total}%` }}
@@ -115,7 +153,6 @@ const Card = ({ project }) => {
           </div>
         </div>
       </div>
-      {showModal && <Modal project={project} onClose={onClose} />}
     </div>
   );
 };

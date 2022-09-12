@@ -103,7 +103,7 @@ button[type='button'].toast-btn {
 
 .list-group-item:before {
   /* content: url('../img/logo-black-16x16.png') !important; */
-  content: url('../public/img/check.svg') !important;
+  /* content: url('../public/img/check.svg') !important; */
   margin-right: 10px;
   top: 10px;
 }
@@ -157,4 +157,8 @@ button[type='button'].toast-btn {
 
 .spinner-border {
   z-index: 9999;
+}
+
+.card-text em a:hover {
+  cursor: pointer;
 }

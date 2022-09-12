@@ -2,7 +2,7 @@ import React from 'react';
 
 const Tech = () => {
   return (
-    <>
+    <section className="container">
       <div className="display-4 fw-light text-center my-5">
         Technologies I use
       </div>
@@ -11,8 +11,9 @@ const Tech = () => {
           <h5 className="text-center">Front-end</h5>
           <ul className="list-group list-group-flush">
             <li className="list-group-item">HTML5</li>
-            <li className="list-group-item">CSS3/SASS/SCSS</li>
+            <li className="list-group-item">CSS3/Sass/SCSS/Less</li>
             <li className="list-group-item">Bootstrap 5</li>
+            <li className="list-group-item">Material UI</li>
             <li className="list-group-item">Javascript</li>
             <li className="list-group-item">React</li>
           </ul>
@@ -37,7 +38,7 @@ const Tech = () => {
           </ul>
         </div>
       </div>
-    </>
+    </section>
   );
 };
 
