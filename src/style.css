@@ -1,0 +1,11 @@
+.bg-btn {
+  background-color: #212529 !important;
+  border: 0 !important;
+}
+
+.bg-gray-600 {
+  background-color: grey !important;
+}
+.bg-gray-700 {
+  color: black !important;
+}

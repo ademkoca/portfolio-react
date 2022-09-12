@@ -1,4 +1,5 @@
 import React from 'react';
+import '../style.css';
 
 const Hero = () => {
   return (
@@ -10,7 +11,7 @@ const Hero = () => {
             My name is Adem. I'm a front-end web developer.
           </p>
           <div className="d-grid gap-2 d-md-flex justify-content-md-start mb-4 mb-lg-3">
-            <a href="#myWork" className="btn btn-primary my-2">
+            <a href="#myWork" className="btn btn-primary my-2 bg-btn">
               See my work
             </a>
             <a
