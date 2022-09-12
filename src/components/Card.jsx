@@ -141,16 +141,26 @@ const Card = ({ project }) => {
             {Object.entries(languages).map(([key, value]) => (
               <div
                 key={key}
-                className={`progress-bar bg-gray-${Math.floor(
-                  Math.random() * (9 - 5) + 6
-                )}00`}
+                className={`progress-bar bg-gray-${
+                  key === 'JavaScript'
+                    ? '9'
+                    : key === 'HTML'
+                    ? '8'
+                    : key === 'CSS'
+                    ? '7'
+                    : '6'
+                }00`}
                 role="progressbar"
                 style={{ width: `${(100 * value) / total}%` }}
                 // aria-valuenow={`${(100 * value) / total}`}
                 aria-valuemin="0"
                 aria-valuemax="100"
               >
-                {key}
+                {(100 * value) / total > 5
+                  ? key
+                  : key === 'JavaScript'
+                  ? 'JS'
+                  : key}
               </div>
             ))}
           </div>

@@ -1,6 +1,11 @@
 .bg-btn {
   background-color: #212529 !important;
   border: 0 !important;
+  color: #fff !important;
+}
+
+.bg-btn:hover {
+  opacity: 0.8;
 }
 
 .bg-gray-600 {
@@ -8,4 +13,17 @@
 }
 .bg-gray-700 {
   color: black !important;
+}
+.btn:first-child {
+  border: 1px solid #212529 !important;
+  color: #212529;
+}
+.btn:hover {
+  background-color: #212529 !important;
+  opacity: 0.8;
+}
+
+.btn-modal {
+  color: #fff !important;
+  background-color: #212529 !important;
 }

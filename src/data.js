@@ -34,7 +34,7 @@ export const projects = [
     ],
     title: 'Wordle clone',
     desc:
-      '<p class="card-text"> A clone of the <strong>popular NY Times puzzle game</strong> <a style href="https://www.nytimes.com/games/wordle/index.html" target="_blank" style="cursor: context-menu;">Wordle</a>. </p><p class="card-text"> This is the initial version of the app. A more advanced version (including light/dark mode switch, stats and "one word per 24 hours" rule is <strong>currently in progress</strong>. </p><p class="card-text"> <em>Made with SCSS and React.</em> </p>',
+      '<p class="card-text"> A clone of the <strong>popular NY Times puzzle game</strong> <a style="color: #212529" href="https://www.nytimes.com/games/wordle/index.html" target="_blank" style="cursor: context-menu;">Wordle</a>. </p><p class="card-text"> This is the initial version of the app. A more advanced version (including light/dark mode switch, stats and "one word per 24 hours" rule is <strong>currently in progress</strong>. </p><p class="card-text"> <em>Made with SCSS and React.</em> </p>',
     URL: 'https://ademkoca.github.io/wordle-clone/',
   },
   {
@@ -61,7 +61,7 @@ export const projects = [
     ],
     title: 'Weather app',
     desc:
-      '<p class="card-text"> Get 24/7 weather data for your location with this <strong>fully responsive, real-time weather app</strong>. </p><p> <small class="card-text"> The theme is automatically switched between <span class="badge bg-light text-dark">light</span> and <span class="badge bg-dark">dark</span> according to the time of the day.</small> </p><p class="card-text"> <em>Made with HTML, CSS (BS 5), JS and <a style href="https://www.weatherapi.com/" target="_blank" style="cursor: context-menu;">WeatherAPI</a></em> </p>',
+      '<p class="card-text"> Get 24/7 weather data for your location with this <strong>fully responsive, real-time weather app</strong>. </p><p> <small class="card-text"> The theme is automatically switched between <span class="badge bg-light text-dark">light</span> and <span class="badge bg-dark">dark</span> according to the time of the day.</small> </p><p class="card-text"> <em>Made with HTML, CSS (BS 5), JS and <a style="color: #212529" href="https://www.weatherapi.com/" target="_blank" style="cursor: context-menu;">WeatherAPI</a></em> </p>',
     URL: 'https://ademkoca.github.io/weather-app/',
   },
   {
@@ -88,7 +88,7 @@ export const projects = [
     ],
     title: 'Where in the world?',
     desc:
-      '<p class="card-text"> <strong>Explore countries</strong> from all parts of the world and <strong>learn more about them</strong>. </p><p> <small class="card-text"> Switch between <span class="badge bg-light text-dark">light</span> and <span class="badge bg-dark">dark</span> theme to your preference.</small> </p><p class="card-text"> <em>Made with HTML, CSS (BS 5), JS and <a style href="https://restcountries.com/" target="_blank" style="cursor: context-menu;">REST Countries API</a></em> </p>',
+      '<p class="card-text"> <strong>Explore countries</strong> from all parts of the world and <strong>learn more about them</strong>. </p><p> <small class="card-text"> Switch between <span class="badge bg-light text-dark">light</span> and <span class="badge bg-dark">dark</span> theme to your preference.</small> </p><p class="card-text"> <em>Made with HTML, CSS (BS 5), JS and <a style="color: #212529" href="https://restcountries.com/" target="_blank" style="cursor: context-menu;">REST Countries API</a></em> </p>',
     URL: 'https://ademkoca.github.io/countries/',
   },
   {
@@ -203,7 +203,7 @@ export const projects = [
     ],
     title: "Search artists' bio",
     desc:
-      '<p class="card-text"> Search for your favorite artist/band biography and photos using this <strong>fully responsive website</strong>. </p><p class="card-text"> <em>Made with HTML, CSS (BS 5), JS and <a style href="https://theaudiodb.com/" target="_blank" style="cursor: context-menu;">TheAudioDB</a></em> </p>',
+      '<p class="card-text"> Search for your favorite artist/band biography and photos using this <strong>fully responsive website</strong>. </p><p class="card-text"> <em>Made with HTML, CSS (BS 5), JS and <a style="color: #212529" href="https://theaudiodb.com/" target="_blank" style="cursor: context-menu;">TheAudioDB</a></em> </p>',
     URL: 'https://ademkoca.github.io/search-bio/',
   },
   {
@@ -220,7 +220,7 @@ export const projects = [
     ],
     title: 'Random cat facts',
     desc:
-      '<p class="card-text"> Every now and then take a break from your hard work and entertain yourself with this <strong>fully responsive random cat facts generator</strong>. </p><p class="card-text"> <em>Made with HTML, CSS (BS 5) JS and <a style href="https://catfact.ninja/" target="_blank" style="cursor: context-menu;">Cat Facts API</a></em> </p>',
+      '<p class="card-text"> Every now and then take a break from your hard work and entertain yourself with this <strong>fully responsive random cat facts generator</strong>. </p><p class="card-text"> <em>Made with HTML, CSS (BS 5) JS and <a style="color: #212529" href="https://catfact.ninja/" target="_blank" style="cursor: context-menu;">Cat Facts API</a></em> </p>',
     URL: 'https://ademkoca.github.io/cats/',
   },
 ];

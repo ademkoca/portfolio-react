@@ -96,7 +96,7 @@ const Modal = ({ project, handleClose }) => {
           </div>
           <div className="modal-footer">
             <a href={project.URL} target="_blank" rel="noopener noreferrer">
-              <button type="button" className="btn btn-primary">
+              <button type="button" className="btn btn-primary btn-modal">
                 Visit site
               </button>
             </a>
