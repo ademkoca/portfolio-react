@@ -2,7 +2,6 @@ export const projects = [
   {
     id: 9,
     GitHubRepoName: 'crowdfund',
-    date: 'crowdfund-life',
     mainImg: 'crowdfund/desktop.png',
     mainImgAlt: 'Crowdfund product page desktop screenshot',
     modalImg: [
@@ -23,7 +22,6 @@ export const projects = [
   {
     id: 8,
     GitHubRepoName: 'wordle-clone',
-    date: 'wordle-life',
     mainImg: 'wordle/desktop.png',
     mainImgAlt: 'Wordle clone desktop screenshot',
     modalImg: ['wordle/desktop.png', 'wordle/tablet.png', '/wordle/mobile.png'],
@@ -40,7 +38,6 @@ export const projects = [
   {
     id: 0,
     GitHubRepoName: 'weather-app',
-    date: 'weather-app',
     mainImg: 'weatherapp/desktop-dark.png',
     mainImgAlt: 'Weather app desktop screenshot',
     modalImg: [
@@ -67,7 +64,6 @@ export const projects = [
   {
     id: 1,
     GitHubRepoName: 'countries',
-    date: 'countries',
     mainImg: 'countries/desktop-dark.png',
     mainImgAlt: 'Countries app dark theme desktop screenshot',
     modalImg: [
@@ -94,7 +90,6 @@ export const projects = [
   {
     id: 2,
     GitHubRepoName: 'todo',
-    date: 'todo',
     mainImg: 'todo/desktop-dark.png',
     mainImgAlt: 'TO-DO app dark theme desktop screenshot',
     modalImg: [
@@ -121,7 +116,6 @@ export const projects = [
   {
     id: 7,
     GitHubRepoName: 'spotify-clone',
-    date: 'spotify-clone',
     mainImg: 'spotify/desktop.png',
     mainImgAlt: 'Spotify clone desktop screenshot',
     modalImg: ['spotify/desktop.png'],
@@ -134,7 +128,6 @@ export const projects = [
   {
     id: 3,
     GitHubRepoName: 'social-media-dashboard-with-theme-switch',
-    date: 'social-media-dashboard-with-theme-switch',
     mainImg: 'social-dashboard/desktop-dark.png',
     mainImgAlt: 'Social media dashboard dark theme desktop screenshot',
     modalImg: [
@@ -161,7 +154,6 @@ export const projects = [
   {
     id: 4,
     GitHubRepoName: 'intro-component-with-signup-form',
-    date: 'intro-component-with-signup-form',
     mainImg: 'register/desktop.png',
     mainImgAlt: 'Register form desktop screenshot',
     modalImg: [
@@ -182,7 +174,6 @@ export const projects = [
   {
     id: 5,
     GitHubRepoName: 'search-bio',
-    date: 'search-bio',
     mainImg: 'search-bio/desktop-gallery.png',
     mainImgAlt: "Search artists' bio homepage desktop screenshot",
     modalImg: [
@@ -209,7 +200,6 @@ export const projects = [
   {
     id: 6,
     GitHubRepoName: 'cats',
-    date: 'cats',
     mainImg: 'cats/desktop.png',
     mainImgAlt: 'Random cat facts desktop screenshot',
     modalImg: ['cats/desktop.png', 'cats/tablet.png', 'cats/mobile.png'],

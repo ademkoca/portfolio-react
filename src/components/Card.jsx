@@ -13,13 +13,6 @@ const Card = ({ project }) => {
   });
   const [total, setTotal] = useState(0);
   const [date, setDate] = useState('');
-  // const sumValues = (obj) => Object.values(obj).reduce((a, b) => a + b);
-  // const getRandomArbitrary = (min, max) => {
-  //   return Math.floor(Math.random() * (max - min) + min);
-  // };
-  // const changecursor = (e) => {
-  //   e.target.style.cursor = 'pointer';
-  // };
   useEffect(() => {
     const getLanguages = async () => {
       await axios
@@ -59,15 +52,12 @@ const Card = ({ project }) => {
   }, [date]);
 
   const [showModal, setShowModal] = useState(true);
+  // console.log(showModal);
   const handleClose = () => {
-    setTimeout(() => {
-      setShowModal(false);
-    }, 1000);
+    setShowModal(false);
   };
   const handleShow = () => {
-    setTimeout(() => {
-      setShowModal(true);
-    }, 1000);
+    setShowModal(true);
   };
   //   console.log('#staticBackdrop' + project.id);
   return (
@@ -80,7 +70,7 @@ const Card = ({ project }) => {
           href="#"
           data-bs-toggle="modal"
           data-bs-target={`#staticBackdrop${project.id}`}
-          onClick={handleShow}
+          onClick={() => handleShow}
         >
           <img
             src={`img/${project.mainImg}`}
@@ -99,19 +89,15 @@ const Card = ({ project }) => {
           <div className="d-flex justify-content-between align-items-center">
             <div className="btn-group">
               <button
+                onClick={() => handleShow}
                 type="button"
-                className="btn btn-sm btn-outline-primary"
+                className="btn btn-sm btn-outline-primary rounded-1"
                 data-bs-toggle="modal"
                 data-bs-target={`#staticBackdrop${project.id}`}
-                onClick={
-                  () =>
-                    // setTimeout(() => {
-                    handleShow
-                  // }, 2000)
-                }
               >
                 Preview
               </button>
+
               <a href={project.URL} target="_blank" rel="noopener noreferrer">
                 <button
                   type="button"
@@ -133,7 +119,7 @@ const Card = ({ project }) => {
                 </button>
               </a>
             </div>
-            <small className="text-muted" id={project.date}>
+            <small className="text-muted" id={project.GitHubRepoName}>
               {moment(date).fromNow()}
             </small>
           </div>

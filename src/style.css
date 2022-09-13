@@ -8,6 +8,11 @@
   opacity: 0.8;
 }
 
+.btn:first-child:active {
+  opacity: 0.8;
+  background-color: #212529 !important;
+}
+
 .bg-gray-600 {
   background-color: grey !important;
 }
