@@ -16,7 +16,7 @@ export const projects = [
     ],
     title: 'Crowdfund product page',
     desc:
-      '<p class="card-text"> A product page for Mastercraft Bamboo Monitor Riser<br> The product is <strong>a beautifully handcrafted monitor stand</strong> to reduce neck and eye strain.</p><p className="card-text"><em>Made with SCSS and React </em></p>',
+      '<p class="card-text"> A product page for Mastercraft Bamboo Monitor Riser<br> The product is <strong>a beautifully handcrafted monitor stand</strong> to reduce neck and eye strain.</p><p className="card-text"><em>Made with SCSS and React.js</em></p>',
     URL: 'https://ademkoca.github.io/crowdfund/',
   },
   {
@@ -32,7 +32,7 @@ export const projects = [
     ],
     title: 'Wordle clone',
     desc:
-      '<p class="card-text"> A clone of the <strong>popular NY Times puzzle game</strong> <a style="color: #212529" href="https://www.nytimes.com/games/wordle/index.html" target="_blank" style="cursor: context-menu;">Wordle</a>. </p><p class="card-text"> This is the initial version of the app. A more advanced version (including light/dark mode switch, stats and "one word per 24 hours" rule is <strong>currently in progress</strong>. </p><p class="card-text"> <em>Made with SCSS and React.</em> </p>',
+      '<p class="card-text"> A clone of the <strong>popular NY Times puzzle game</strong> <a style="color: #212529" href="https://www.nytimes.com/games/wordle/index.html" target="_blank" style="cursor: context-menu;">Wordle</a>. </p><p class="card-text"> This is the initial version of the app. A more advanced version (including light/dark mode switch, stats and "one word per 24 hours" rule is <strong>currently in progress</strong>. </p><p class="card-text"> <em>Made with SCSS and React.js</em> </p>',
     URL: 'https://ademkoca.github.io/wordle-clone/',
   },
   {
