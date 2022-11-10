@@ -2,8 +2,8 @@ export const projects = [
   {
     id: 10,
     GitHubRepoName: 'tiktik',
-    mainImg: 'tiktik/desktop.png',
-    mainImgAlt: 'tiktik product page desktop screenshot',
+    mainImg: 'tiktik/homepage-sidebar-opened.png',
+    mainImgAlt: 'TikTik homepage',
     modalImg: [
       'tiktik/homepage-sidebar-closed.png',
       'tiktik/homepage-sidebar-opened.png',
