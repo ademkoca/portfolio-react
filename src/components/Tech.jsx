@@ -15,6 +15,7 @@ const Tech = () => {
             <li className="list-group-item">Material UI</li>
             <li className="list-group-item">React.js</li>
             <li className="list-group-item">Next.js</li>
+            <li className="list-group-item">TypeScript</li>
           </ul>
         </div>
         <div className="col-lg-4 col-md-4 col-sm-12">
