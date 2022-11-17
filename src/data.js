@@ -34,7 +34,7 @@ export const projects = [
     ],
     title: 'TikTik - TikTok clone app',
     desc:
-      '<p class="card-text"> A TikTok clone app named TikTik. This full-stack app allows users to login simply using their Google account, and share, like and comment on videos of other users.</p><p className="card-text"><em>Made with TypeScript, Next.js, Tailwind CSS and Sanity (backend)</em></p>',
+      '<p class="card-text"> A TikTok clone app named TikTik. This full-stack app allows users to login simply using their Google account, like and comment on videos of other users, and upload their own videos. Videos can also be browsed by category. Users can also search for videos or other users.</p><p className="card-text"><em>Made with TypeScript, Next.js, Zustand, Tailwind CSS and Sanity (backend)</em></p>',
     URL: 'https://tiktik-test.vercel.app/',
   },
   {
